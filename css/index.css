@@ -30,7 +30,23 @@ header {
 }
 
 .logo img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 1.我們在xs屏幕下 logo裏面的圖片要隱藏
+解：class="d-none d-sm-block" */
+
+/* 2.我們事先準備一個盒子 在logo裏面 她平時是隱藏的 只有在超小屏幕下顯示
+解：class="d-block d-sm-none */
+.logo a span {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
 }
 
 ul {
