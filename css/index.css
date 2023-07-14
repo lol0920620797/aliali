@@ -1,3 +1,11 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  background-color: #fff;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -56,6 +64,38 @@ ul {
 .nav {
   background-color: #eee;
   border-bottom: 1px solid #ccc;
+}
+
+/* 當進入 sm跟xs 屏幕下 我們 nav 裏面的 li 浮動起來 並且寬度爲20%  */
+@media screen and (max-width: 540px) {
+  .nav li {
+    float: left;
+    width: 20%;
+  }
+
+  article {
+    margin-top: 10px;
+  }
+}
+
+/* 當進去 xs 屏幕下 我們的 nav 文字會變成14px */
+@media screen and (max-width: 576px) {
+  .nav li a {
+    font-size: 14px;
+  }
+
+  /* 當我們處於 Xs 屏幕下 第一個li 寬度爲 100% 剩下的li 爲 50% */
+  .news li:nth-child(1) {
+    width: 100% !important;
+  }
+
+  .news li {
+    width: 50% !important;
+  }
+
+  .publish h3 {
+    font-size: 14px;
+  }
 }
 
 .nav a {
